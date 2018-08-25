@@ -14,7 +14,6 @@ client = commands.Bot(command_prefix="MUB ", case_insensitive=True)
 
 test = mub_db.get_test()
 
-
 tasks_created = False
 count = 0
 start_time = time.time()
