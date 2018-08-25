@@ -114,7 +114,7 @@ async def background_update():
 
 async def faster_update():
     await client.wait_until_ready()
-    while not client.is_closeD():
+    while not client.is_closed():
         await changes()
         await asyncio.sleep(1)
 
