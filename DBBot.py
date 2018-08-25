@@ -10,7 +10,7 @@ TOKEN = os.environ.get('TOKEN')
 DATABASE_URL = os.environ['DATABASE_URL']
 mub_db = MUBDatabase(DATABASE_URL)
 
-client = commands.Bot(command_prefix="MUB ", case_insensitive=True)
+client = commands.Bot(command_prefix="ABLAHLABLABLABLABLABLABLABLABLABLALBABLABLABLABL ", case_insensitive=True)
 
 test = mub_db.get_test()
 
