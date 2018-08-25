@@ -86,8 +86,8 @@ async def changes():
     id_int += 1
 
     if id_int > 200:
-        x = random.randrange(1, 199)
-        y = random.randrange(1, 199)
+        x = random.randrange(id_int - 190, id_int - 10)
+        y = random.randrange(1, id_int)
         update_test(x, str(y))
 
     if id_int > 200:
