@@ -101,6 +101,9 @@ async def main_update():
     # Printing status
     print_status()
 
+    # Print data
+    print(mub_db.get_test())
+
 
 async def background_update():
     await client.wait_until_ready()
@@ -114,31 +117,6 @@ async def faster_update():
     while not client.is_closeD():
         await changes()
         await asyncio.sleep(1)
-
-
-@client.event
-async def on_message(message):
-    if message.author.bot:
-        return
-
-    await client.process_commands(message)
-
-
-@client.command()
-async def add(ctx, *, user):
-    user = user.lower()
-    add_user(user, ctx.guild.id)
-
-
-@client.command()
-async def remove(ctx, *, user):
-    user = user.lower()
-    remove_user(user, ctx.guild.id)
-
-
-@client.command()
-async def set_channel(ctx):
-    mub_db.update_guild(ctx.guild.id, ctx.channel.id)
 
 
 @client.event
