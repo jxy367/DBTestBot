@@ -91,7 +91,7 @@ async def changes():
         update_test(x, str(y))
 
     if id_int > 200:
-        remove_test(id_int)
+        remove_test(id_int - 200)
 
 
 async def main_update():
