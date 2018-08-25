@@ -1,1 +1,1 @@
-worker: python3 MALUpdateBot.py
+worker: python3 DBBot.py
