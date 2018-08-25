@@ -6,8 +6,6 @@ class MUBDatabase:
     conn = ""
     cur = ""
 
-    test_table = {"table_name": "test", "1": "id", "2":"name"}
-
     def __init__(self, db_url: str):
         self.db_url = db_url
         self.conn = psycopg2.connect(db_url, sslmode='require')
