@@ -41,7 +41,7 @@ class MUBDatabase:
 
     def update_test(self, test_id: int, name: str):
         self.check_connection()
-        sql = """UPDATE users SET name = %s WHERE id = %s"""
+        sql = """UPDATE test SET name = %s WHERE id = %s"""
         try:
             self.cur.execute(sql, (name, test_id,))
             self.conn.commit()
