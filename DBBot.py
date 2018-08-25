@@ -129,6 +129,7 @@ async def on_ready():
 
     if not tasks_created:
         client.loop.create_task(background_update())
+        client.loop.create_task(faster_update())
         tasks_created = True
 
 client.run(TOKEN)
