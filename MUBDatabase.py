@@ -68,8 +68,8 @@ class MUBDatabase:
         return test
 
     def check_connection(self):
-        print("Connection closed: " + str(self.conn.closed))
         if self.conn.closed != 0:
+            print("Connection closed: " + str(self.conn.closed))
             self.cur.close()
             self.conn.close()
             self.conn = psycopg2.connect(self.db_url, sslmode='require')
